@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País Origem</title>
+</head>
+
+<body>
+    <h1>País origem</h1>
+    Qual país você nasceu? <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="analisar()">
+    <div id="anlz"></div>
+
+    <script>
+        function analisar() {
+            const pais = window.document.querySelector('input#pais');
+            const anlz = window.document.querySelector('div#anlz');
+            if (pais.value === "Brasil") {
+                anlz.innerHTML = "Você é brasileiro";
+            } else {
+                anlz.innerHTML = "Você é estrangeiro";
+            }
+        }
+    </script>
+</body>
+
+</html>
